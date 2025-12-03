@@ -49,7 +49,7 @@ async function guardarSecuencia() {
   const payload = { nombre, descripcion, movimientos: movimientosSeleccionados };
 
   try {
-    const res = await fetch("http://18.204.20.70:5000/api/secuencias", {
+    const res = await fetch("http://18.204.20.70:5000/api/secuencias/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
@@ -137,3 +137,4 @@ ws.onmessage = (msg) => {
     console.error("Error al procesar mensaje WS:", err);
   }
 };
+
